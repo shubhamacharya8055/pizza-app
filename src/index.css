@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'pizza-regular'; /* Replace with your desired font name */
+  src: url('/fonts/Proxima\ Nova\ Rg\ Regular.woff2') format('woff2');
+  font-weight: normal; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
+@font-face {
+  font-family: 'pizza-semibold'; /* Replace with your desired font name */
+  src: url('/fonts/ProximaNova-Semibold.woff2') format('woff2');
+  font-weight: normal; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
+@font-face {
+  font-family: 'pizza-extraBold'; /* Replace with your desired font name */
+  src: url('/fonts/ProximaNova-Extrabold_0.woff2') format('woff2');
+  font-weight: normal ; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+

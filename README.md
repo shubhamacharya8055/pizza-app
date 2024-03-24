@@ -1,0 +1,1 @@
+A simple pizza app build with react-query , react-router-dom , tailwind css 
