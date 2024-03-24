@@ -2,7 +2,7 @@ import '../pizza.css'
 
 export default function PizzaLoader() {
   return (
-    <div class="box">
+    <div class="box translate-y-52 lg:translate-y-0">
     <div class="pizza-slice slice-1">
       <div class="border">
         <div class="crust"></div>
@@ -76,5 +76,6 @@ export default function PizzaLoader() {
       </div>
     </div>
   </div>
+
   )
 }
