@@ -20,11 +20,11 @@ export default function Createuser() {
 
 
   return (
-    <form className="w-full justify-center flex gap-x-2"
+    <form className="w-full justify-center flex gap-x-2 flex-col gap-y-3 items-center lg:flex-row "
     onSubmit={handleSubmit}
     >
             <input type="text" 
-            className="py-3 px-5 rounded-full  placeholder:text-black w-1/3 focus:outline-none"
+            className="py-3 px-5 rounded-full  placeholder:text-black lg:w-1/3 focus:outline-none w-2/3"
             placeholder="start-ordering"
             value={username}
             onChange={(e) => setUsername(e.target.value)}

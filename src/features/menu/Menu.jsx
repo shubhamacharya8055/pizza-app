@@ -19,7 +19,7 @@ function Menu() {
     if(isLoading) return <PizzaLoader />
 
   return (
-    <section className="h-full w-2/3 mx-auto px-5">
+    <section className="h-full lg:w-2/3 mx-auto px-5 w-full">
         <div className="flex flex-col divide-y divide-black">
             {menu?.map((item , index) => (
               <MenuItem item={item} key={index} />

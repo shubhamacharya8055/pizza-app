@@ -16,7 +16,7 @@ export default function Home() {
     className="flex items-center justify-center w-full h-full"
     >   
     <div className="flex flex-col items-center gap-y-2">
-        <p className="text-4xl capitalize font-pizza-extraBold bg-gradient-to-tr from-red-600 to-purple-700 text-transparent bg-clip-text text-shadow-sm">The Amrut's delecious pizza will make you order 3 times a day</p>
+        <p className="text-4xl capitalize font-pizza-extraBold bg-gradient-to-tr from-red-600 to-purple-700 text-transparent bg-clip-text text-shadow-sm w-2/3 text-center">The Amrut's delecious pizza will make you order 3 times <br /><span className="lowercase">a</span> day</p>
         {username ?  <button
         onClick={() => {
           navigate("/menu")

@@ -20,19 +20,20 @@ export default function Navbar() {
   return (
     <header className=" min-w-[100%] h-24 px-5 lg:px-10 
     bg-gradient-to-tr from-yellow-100 to-orange-200
-    border-b border-black/40 rounded-tl-xl rounded-tr-xl
+    border-b border-black/40
     ">
         <nav className=" h-full 
-        flex items-center justify-between
+        flex items-center justify-between gap-x-6
         ">
-            <Link to="/">
-            <p className="text-xl font-pizza-semibold tracking-widest text-shadow-lg cursor-pointer">THE AMRUT'S</p>
+            <Link to="/" >
+            <p className="lg:text-xl text-sm font-pizza-semibold tracking-widest text-shadow-lg cursor-pointer">THE AMRUT'S</p>
             </Link>
             <form onSubmit={handleSearchOrder}>
                 <input type="text"
                 placeholder="Search your order"
                 className="placeholder:text-base placeholder:font-pizza-regular placeholder:text-black
-                focus:outline-none focus:ring focus:ring-black/50 shadow-sm border py-3 rounded-lg px-5 
+                focus:outline-none focus:ring focus:ring-black/50 shadow-sm border py-3 lg:rounded-lg px-5
+                rounded-full w-full
                 "
                 value={orderId}
                 onChange={(e) => setOrderId(e.target.value)}

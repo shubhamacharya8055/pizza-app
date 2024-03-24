@@ -14,7 +14,7 @@ export default function Cart() {
   }
 
   return (
-    <section className="h-full w-2/3 mx-auto px-5">
+    <section className="h-full lg:w-2/3 mx-auto px-5">
       <div className="h-full w-full py-5 flex flex-col gap-y-3">
         {username ? (
             <Link className="text-blue-600 hover:underline tracking-widest italic" to="/menu">

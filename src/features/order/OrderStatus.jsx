@@ -15,6 +15,7 @@ export default function OrderStatus() {
   const {MakePriority , isMaking} = useMakePriority()
 
   if(isGetting) return <div className='text-2xl font-pizza-extraBold flex items-center justify-center w-full h-full'>The order is Loading</div>
+  
   if(error) return <div className='flex justify-center items-center w-full h-full'>
     <div className='flex flex-col gap-y-2'>
     <p className='text-xl text-red-600'>No orders found with this id</p>
@@ -29,12 +30,12 @@ export default function OrderStatus() {
 
   return (
     <section
-    className='w-2/3 mx-auto'
+    className='lg:w-2/3 w-full px-5 mx-auto'
     >
         <div className='w-full h-full flex flex-col gap-y-5 py-10'>
-            <div className='flex justify-between items-center'>
+            <div className='flex lg:flex-row flex-col justify-between items-center gap-y-2'>
                 <p className='font-pizza-semibold flex gap-x-3 text-xl'> <span>Order</span> <span> #{Order?.id} </span> <span>  status </span></p>
-                <div className='flex gap-x-2'>
+                <div className='flex gap-x-2 lg:flex-row flex-col gap-y-2 lg:gap-y-0'>
                 {Order?.priority && <button className='uppercase bg-red-400 px-5 py-2 text-sm tracking-wider rounded-full font-pizza-semibold text-white'>Priority</button>}
                 <button className='uppercase bg-green-500 px-5 py-2 text-sm tracking-wider rounded-full font-pizza-semibold text-white'>{Order?.status} order</button>
                 </div>

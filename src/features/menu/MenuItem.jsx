@@ -18,8 +18,7 @@ export default function MenuItem({item}) {
             totalPrice : item.unitPrice * 1 , 
             ingredients : item.ingredients
         }
-        
-        
+          
         dispatch(AddItem(newItem))
     }
 

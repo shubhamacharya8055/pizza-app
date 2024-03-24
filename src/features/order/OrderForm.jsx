@@ -61,7 +61,6 @@ export default function OrderForm() {
     <div className="flex gap-x-3 items-center justify-between w-full">
         <label htmlFor="customer" className=" tracking-widest font-pizza-semibold text-lg">First Name</label>
         <input type="text" name="customer" id="customer"
-        // defaultValue={username || ""}
         className=" border py-2 px-5 focus:outline-none focus:ring focus:ring-black/20 rounded-full w-2/3"
         value={customer}
         onChange={(e) => setcustomer(e.target.value)}
@@ -69,7 +68,7 @@ export default function OrderForm() {
         />
     </div>
     <div className="flex gap-x-3 items-center justify-between w-full">
-        <label htmlFor="phone" className=" tracking-widest font-pizza-semibold text-lg">Phone number</label>
+        <label htmlFor="phone" className=" tracking-widest font-pizza-semibold text-lg">Phone No#</label>
         <input type="tel" name="phone" id="phone" 
         className=" border py-2 px-5 focus:outline-none focus:ring focus:ring-black/20 rounded-full w-2/3"
         value={phone}

@@ -23,7 +23,7 @@ export default function CartItem({item}) {
   return (
     <div
       key={item.pizzaId}
-      className="flex justify-between items-center gap-x-5 w-full py-3"
+      className="flex lg:flex-row lg:justify-between lg:items-center gap-x-5 w-full py-3 flex-col items-start gap-y-3 lg:gap-y-0"
     >
       <div className="flex gap-x-3 items-center">
         <p className="font-pizza-semibold">{item.quantity}x</p>
