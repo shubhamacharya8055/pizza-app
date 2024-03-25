@@ -22,7 +22,7 @@ export default function Navbar() {
     bg-gradient-to-tr from-yellow-100 to-orange-200
     relative 
     ">
-      <img src="/fonts/tasty.jpg" alt="" className="w-[80%] h-full object-cover scale-150 absolute left-0" />
+      <img src="/fonts/tasty.jpg" alt="" className="w-[80%] h-full object-cover scale-150 absolute left-0 opacity-90" />
         <nav className=" h-full 
         flex items-center justify-between gap-x-6 relative
         ">
