@@ -30,7 +30,7 @@ export default function OrderStatus() {
 
   return (
     <section
-    className='lg:w-2/3 w-full px-5 mx-auto'
+    className='lg:w-2/3 w-full px-5 mx-auto py-10'
     >
         <div className='w-full h-full flex flex-col gap-y-5 py-10'>
             <div className='flex lg:flex-row flex-col justify-between items-center gap-y-2'>
