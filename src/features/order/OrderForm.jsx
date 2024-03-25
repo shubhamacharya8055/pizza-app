@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { formatCurrency } from "../../utils/helpers";
+import { convertUSDtoINR, formatCurrency } from "../../utils/helpers";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useCreateOrder from "./useCreateOrder";
@@ -111,7 +111,7 @@ export default function OrderForm() {
     <button type="submit" className="text-left block bg-yellow-300 px-5 py-3 rounded-full"
     disabled = {isCreating}
     >
-        Order now for <span className="font-pizza-extraBold"> {formatCurrency( totalCartPrice )} </span>
+        Order now for <span className="font-pizza-extraBold"> {formatCurrency(convertUSDtoINR( totalCartPrice ))} </span>
     </button>
     </div>
 </form>

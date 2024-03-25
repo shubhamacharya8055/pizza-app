@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import useGetOrder from './useGetOrder';
-import { calcMinutesLeft, formatCurrency, formatDate } from '../../utils/helpers';
+import { calcMinutesLeft, convertUSDtoINR, formatCurrency, formatDate } from '../../utils/helpers';
 import { useSelector } from 'react-redux';
 import useMakePriority from './useMakePriority';
 
@@ -61,9 +61,9 @@ export default function OrderStatus() {
             </div>
 
             <div className='px-5 py-5 bg-gray-100 flex flex-col gap-y-2'>
-                <p className='capitalize text-sm tracking-widest'>pizza price : {formatCurrency(Order?.orderPrice)}</p>
-                {Order?.priority && <p className='tracking-widest text-base'>Priority price {formatCurrency(Order?.priorityPrice)}</p>}
-                <p className='text-lg tracking-wider font-pizza-extraBold'>To pay on Delivery {formatCurrency(Order?.priorityPrice ? (Order?.orderPrice + Order?.priorityPrice) : Order?.orderPrice)}</p>
+                <p className='capitalize text-sm tracking-widest'>pizza price : {formatCurrency( convertUSDtoINR( Order?.orderPrice ))}</p>
+                {Order?.priority && <p className='tracking-widest text-base'>Priority price {formatCurrency( convertUSDtoINR( Order?.priorityPrice ))}</p>}
+                <p className='text-lg tracking-wider font-pizza-extraBold'>To pay on Delivery {formatCurrency( Order?.priorityPrice  ?  convertUSDtoINR ( (Order?.orderPrice + Order?.priorityPrice) ) : convertUSDtoINR( Order?.orderPrice ))}</p>
             </div>
 
             <div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { formatCurrency } from '../utils/helpers'
+import { convertUSDtoINR, formatCurrency } from '../utils/helpers'
 
 export default function Footer() {
 
@@ -21,7 +21,7 @@ export default function Footer() {
         <div className='h-full w-full flex justify-between items-center'>
             <div className='flex gap-x-5 text-2xl font-pizza-semibold'>   
             <p className="tracking-wide text-slate-100 text-shadow-xl">{totalPizzas} Pizzas</p>
-            <p className='tracking-widest text-slate-50 text-shadow-xl'>{formatCurrency(totalPrice)} </p>
+            <p className='tracking-widest text-slate-50 text-shadow-xl'>{formatCurrency(convertUSDtoINR(totalPrice))} </p>
             </div>
 
 

@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { formatCurrency } from "../../utils/helpers";
+import { convertUSDtoINR, formatCurrency } from "../../utils/helpers";
 import { AddQuantity, DeleteItem, RemoveQuantity } from "./cartSlice";
 
 export default function CartItem({item}) {
@@ -43,7 +43,7 @@ export default function CartItem({item}) {
             +
           </button>
         </div>
-        <p className="font-pizza-extraBold tracking-widest">{formatCurrency(item.totalPrice)}</p>
+        <p className="font-pizza-extraBold tracking-widest">{formatCurrency(convertUSDtoINR(item.totalPrice))}</p>
         <button className="bg-yellow-300 px-5 py-2 tracking-widest text-sm font-pizza-semibold rounded-full"
         onClick={() => Delete(item.pizzaId)}
         >

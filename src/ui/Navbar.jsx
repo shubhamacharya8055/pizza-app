@@ -20,13 +20,14 @@ export default function Navbar() {
   return (
     <header className=" min-w-[100%] h-24 px-5 lg:px-10 
     bg-gradient-to-tr from-yellow-100 to-orange-200
-    border-b border-black/40
+    relative 
     ">
+      <img src="/fonts/tasty.jpg" alt="" className="w-[80%] h-full object-cover scale-150 absolute left-0" />
         <nav className=" h-full 
-        flex items-center justify-between gap-x-6
+        flex items-center justify-between gap-x-6 relative
         ">
             <Link to="/" >
-            <p className="lg:text-xl text-sm font-pizza-semibold tracking-widest text-shadow-lg cursor-pointer">THE AMRUT'S</p>
+            <p className="lg:text-xl text-sm text-white font-pizza-semibold tracking-widest text-shadow-lg cursor-pointer">THE AMRUT'S</p>
             </Link>
             <form onSubmit={handleSearchOrder}>
                 <input type="text"
@@ -39,7 +40,7 @@ export default function Navbar() {
                 onChange={(e) => setOrderId(e.target.value)}
              />
             </form>
-            {username && <p className="text-xl tracking-wider font-pizza-semibold text-shadow-xl">{username}</p> }
+            {username && <p className="text-xl tracking-wider text-white font-pizza-semibold text-shadow-xl">{username}</p> }
         </nav>
     </header>
   )

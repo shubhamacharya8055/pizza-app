@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { formatCurrency } from "../../utils/helpers"
+import { convertUSDtoINR, formatCurrency } from "../../utils/helpers"
 import { AddItem, AddQuantity } from "../cart/cartSlice";
 import CartButtons from "../cart/CartButtons";
 
@@ -37,7 +37,7 @@ export default function MenuItem({item}) {
         <p className="text-gray-600 text-sm italic">{item.ingredients.join(", ")}</p>
     </div>
     <div className="mt-auto flex justify-between">
-        <p className="text-base mt-1 font-pizza-extraBold">{formatCurrency( item.unitPrice )}</p>
+        <p className="text-base mt-1 font-pizza-extraBold">{formatCurrency(convertUSDtoINR( item.unitPrice ))}</p>
        
         { item.soldOut === false && !isInCart && <button className="bg-yellow-300 px-5 py-2 text-xs font-pizza-semibold rounded-full"
         onClick={AddItemToCart}
