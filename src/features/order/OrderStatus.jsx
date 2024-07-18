@@ -14,6 +14,8 @@ export default function OrderStatus() {
   const {Order , isGetting , error } = useGetOrder(params.id)
   const {MakePriority , isMaking} = useMakePriority()
 
+  console.log(Order)
+
   if(isGetting) return <div className='text-2xl font-pizza-extraBold flex items-center justify-center w-full h-full'>The order is Loading</div>
   
   if(error) return <div className='flex justify-center items-center w-full h-full'>
@@ -55,7 +57,7 @@ export default function OrderStatus() {
                             cart.find((ing) => ing.pizzaId === item?.pizzaId)?.ingredients?.join(", ")
                             }</p>
                             </div>
-                            <p className='font-pizza-extraBold'>{formatCurrency(item?.totalPrice)}</p>
+                            <p className='font-pizza-extraBold'>{formatCurrency( convertUSDtoINR( item?.totalPrice ))}</p>
                     </div>
                 ))}
             </div>
