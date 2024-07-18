@@ -20,9 +20,9 @@ export default function Navbar() {
   return (
     <header className=" min-w-[100%] h-24 px-5 lg:px-10 
     bg-gradient-to-tr from-yellow-100 to-orange-200
-    relative 
+    relative overflow-hidden
     ">
-      <img src="/fonts/tasty-min.jpg" alt="" className="w-[80%] h-full object-cover scale-150 absolute left-0 opacity-90" />
+      <img src="/fonts/tasty-min.jpg" alt="" className="w-full h-full object-cover scale-150 absolute left-0 opacity-90" />
         <nav className=" h-full 
         flex items-center justify-between gap-x-6 relative
         ">
@@ -33,7 +33,7 @@ export default function Navbar() {
                 <input type="text"
                 placeholder="Search your order"
                 className="placeholder:text-base placeholder:font-pizza-regular placeholder:text-black
-                focus:outline-none focus:ring focus:ring-black/50 shadow-sm border py-3 lg:rounded-lg px-5
+                focus:outline-none focus:ring focus:ring-black/50 shadow-sm border py-3 lg:rounded-full px-5
                 rounded-full w-full
                 "
                 value={orderId}
